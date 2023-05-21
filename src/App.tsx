@@ -1,4 +1,3 @@
-import React from 'react';
 import Space from './component/space/Space';
 import Animate from './component/animate/Animate';
 
