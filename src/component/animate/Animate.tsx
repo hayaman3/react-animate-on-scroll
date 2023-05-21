@@ -1,7 +1,5 @@
-import React from 'react';
-
 function Animate() {
-	return <section className="qualification section"></section>;
+	return <section className="qualification section">asd</section>;
 }
 
 export default Animate;
