@@ -1,5 +1,11 @@
+import Card from './cards/Card';
+
 function Animate() {
-	return <section className="qualification section">asd</section>;
+	return (
+		<section className="animate section">
+			<Card />
+		</section>
+	);
 }
 
 export default Animate;
