@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer';
 import './cards.css';
 
 const cardData = [
@@ -24,11 +25,19 @@ const cardData = [
 ];
 
 function Card() {
+	const { ref, inView } = useInView({
+		threshold: 0,
+	});
+
 	return (
 		<>
 			{cardData.map(data => (
-				<div className="card">
-					<h1 className="title">Title: {data.title}</h1>
+				<div>
+					<h1
+						ref={ref}
+						className={`transition-opacity ${inView ? 'red' : 'blue'}`}>
+						Title: {data.title}
+					</h1>
 					<h2 className="details">Details: {data.details}</h2>
 				</div>
 			))}
